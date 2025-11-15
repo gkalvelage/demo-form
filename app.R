@@ -110,17 +110,17 @@ server <- function(input, output, session) {
                   NULL,
                   choiceNames = list(
                     HTML("Der Container ist <strong>voll</strong>."),
-                    HTML("Hier wurde <strong>wilder Müll</strong> abgestellt."),
-                    HTML("Das Umfeld ist <strong>stark verschmutzt</strong>."),
-                    HTML("Der Container wurde <strong>stark beschädigt</strong>."),
-                    HTML("Ein <strong>sonstiges</strong> Problem.")
+                    HTML("Es wurde illegal <strong>Müll abgestellt</strong>."),
+                    HTML("Der Boden ist <strong>sehr verschmutzt</strong>."),
+                    HTML("Der Container ist <strong>stark beschädigt</strong>."),
+                    HTML("<strong>Sonstiges</strong> Problem.")
                   ),
                   choiceValues = list(
                     "Der Container ist voll.",
-                    "Hier wurde wilder Müll abgestellt.",
-                    "Das Umfeld ist stark verschmutzt.",
-                    "Der Container wurde stark beschädigt.",
-                    "Ein sonstiges Problem."
+                    "Es wurde illegal Müll abgestellt.",
+                    "Der Boden ist sehr verschmutzt.",
+                    "Der Container ist stark beschädigt.",
+                    "Sonstiges Problem."
                   ),
                   selected = character(0)
                 )
@@ -129,7 +129,8 @@ server <- function(input, output, session) {
                 actionButton("submit", "Absenden", class = "btn btn-primary")
             ),
             div(class = "footer-text",
-                p("Ihre Angaben werden anonymisiert gespeichert."),
+                p("Ihre Meldung wird automatisch zugeordnet.", br(),
+                  "Alle Meldungen werden anonymisiert gespeichert."),
                 p(
                   tags$a("Impressum", href = "https://meldeeimer.de/impressum/"),
                   " | ",
