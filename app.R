@@ -101,7 +101,7 @@ server <- function(input, output, session) {
         div(class = "main-title",
             img(src = "https://meldeeimer.de/wp-content/uploads/2024/05/meldeeimer-150x150.png", 
                 style = "max-width: 100%; height: auto;"),
-            h2("Wo liegt das Problem?")
+            h2("Was möchten Sie melden?")
         ),
         div(class = "card-custom",
             div(style = "text-align: left;",
@@ -112,13 +112,15 @@ server <- function(input, output, session) {
                     HTML("Der Container ist <strong>voll</strong>."),
                     HTML("Hier wurde <strong>wilder Müll</strong> abgestellt."),
                     HTML("Das Umfeld ist <strong>stark verschmutzt</strong>."),
-                    HTML("Der Container wurde <strong>stark beschädigt</strong>.")
+                    HTML("Der Container wurde <strong>stark beschädigt</strong>."),
+                    HTML("Ein <strong>sonstiges</strong> Problem.")
                   ),
                   choiceValues = list(
                     "Der Container ist voll.",
                     "Hier wurde wilder Müll abgestellt.",
                     "Das Umfeld ist stark verschmutzt.",
-                    "Der Container wurde stark beschädigt."
+                    "Der Container wurde stark beschädigt.",
+                    "Ein sonstiges Problem."
                   ),
                   selected = character(0)
                 )
