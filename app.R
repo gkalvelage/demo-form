@@ -110,17 +110,13 @@ server <- function(input, output, session) {
                   NULL,
                   choiceNames = list(
                     HTML("Der Container ist <strong>voll</strong>."),
-                    HTML("Es wurde illegal <strong>Müll abgestellt</strong>."),
-                    HTML("Der Boden ist <strong>sehr verschmutzt</strong>."),
-                    HTML("Der Container ist <strong>stark beschädigt</strong>."),
-                    HTML("<strong>Sonstiges</strong> Problem.")
+                    HTML("Es wurde illegal <strong>Müll abgestellt</strong> / das Umfeld ist <strong>stark verschmutzt</strong>."),
+                    HTML("Der Container ist <strong>stark beschädigt</strong>.")
                   ),
                   choiceValues = list(
                     "Der Container ist voll.",
-                    "Es wurde illegal Müll abgestellt.",
-                    "Der Boden ist sehr verschmutzt.",
-                    "Der Container ist stark beschädigt.",
-                    "Sonstiges Problem."
+                    "Es wurde illegal Müll abgestellt / das Umfeld ist stark verschmutzt.",
+                    "Der Container ist stark beschädigt."
                   ),
                   selected = character(0)
                 )
